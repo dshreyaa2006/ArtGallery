@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f6f9;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav a {
+            color: white !important;
+            margin: 0 12px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: #ffcc00 !important;
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(
+                rgba(0,0,0,0.65),
+                rgba(0,0,0,0.65)
+            ),
+            url("https://images.unsplash.com/photo-1526498460520-4c246339dccb") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+
+        /* ================= HERO CONTAINER ================= */
+        .hero-container {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            padding: 60px;
+            max-width: 850px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            color: white;
+            text-align: center;
+        }
+
+        .hero-container h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero-container p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #f1f1f1;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            margin-top: auto;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .footer span {
+            color: #ffcc00;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .hero-container {
+                padding: 40px 25px;
+                margin: 0 15px;
+            }
+
+            .hero-container h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Art Gallery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="LoginServlet">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="ArtsServlet">Arts</a></li>
+                <li class="nav-item"><a class="nav-link" href="EventServlet">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="ContactServlet">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="AboutServlet">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION WITH CONTAINER -->
+<section class="hero">
+    <div class="hero-container">
+        <h1>Welcome to the Art Gallery</h1>
+        <p>
+            Experience a curated collection of paintings, sculptures,
+            and artistic creations from talented artists around the world.
+            Step into a space where creativity, culture, and expression come together.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 <span>Art Gallery</span>. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
